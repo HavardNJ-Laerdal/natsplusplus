@@ -1,0 +1,3 @@
+[submodule "qtnats"]
+	path = qtnats
+	url = https://github.com/Kazmirchuk/qtnats.git
