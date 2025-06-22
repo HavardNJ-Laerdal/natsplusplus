@@ -2,8 +2,10 @@
 #define NATS_MESSAGE_BUS_THINGY_H
 
 #include <QObject>
+#include "nlohmann/json.hpp"
 
 #include <qtnats.h>
+
 
 #include "MessageBusInterface.h"
 

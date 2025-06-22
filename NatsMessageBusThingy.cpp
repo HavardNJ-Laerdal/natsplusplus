@@ -20,7 +20,7 @@ void NatsMessageBusThingy::publish(const std::string& address, const std::string
 }
 
 void NatsMessageBusThingy::subscribe(const std::string& address, std::function<void(const std::string&)> cb){
-    qDebug() << "subscribe to: " << QString::fromStdString(address);
+    qDebug() << "subscribing to: " << QString::fromStdString(address);
     QtNats::Subscription* subscription = m_client.subscribe(QString::fromStdString(address).toUtf8());
     QObject::connect(subscription, &QtNats::Subscription::received, [&](const QtNats::Message& message) {
         cb(QString(message.data).toStdString());
